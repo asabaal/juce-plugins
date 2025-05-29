@@ -41,7 +41,7 @@ add_compile_definitions(
 )
 
 # Include JUCE legacy headers
-include_directories(../../JuceLibraryCode)
+include_directories(JuceLibraryCode)
 # Include JUCE system headers
 include_directories(/usr/include/juce)
 include_directories(/usr/local/include/juce)
@@ -66,25 +66,25 @@ include_directories(/usr/include/webkitgtk-4.0)
 
 # Source files
 set(SOURCES
-    WaveShaperProAudioProcessor.cpp
-    WaveShaperProAudioProcessorEditor.cpp
-    WaveShapingEngine.cpp
+    Source/WaveShaperProAudioProcessor.cpp
+    Source/WaveShaperProAudioProcessorEditor.cpp
+    Source/WaveShapingEngine.cpp
     
     # JUCE Library Code files
-    ../../JuceLibraryCode/include_juce_audio_basics.cpp
-    ../../JuceLibraryCode/include_juce_audio_devices.cpp
-    ../../JuceLibraryCode/include_juce_audio_formats.cpp
-    #../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp
-    ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp
-    ../../JuceLibraryCode/include_juce_audio_processors.cpp
-    ../../JuceLibraryCode/include_juce_audio_utils.cpp
-    ../../JuceLibraryCode/include_juce_core.cpp
-    ../../JuceLibraryCode/include_juce_data_structures.cpp
-    ../../JuceLibraryCode/include_juce_dsp.cpp
-    ../../JuceLibraryCode/include_juce_events.cpp
-    ../../JuceLibraryCode/include_juce_graphics.cpp
-    ../../JuceLibraryCode/include_juce_gui_basics.cpp
-    ../../JuceLibraryCode/include_juce_gui_extra.cpp
+    JuceLibraryCode/include_juce_audio_basics.cpp
+    JuceLibraryCode/include_juce_audio_devices.cpp
+    JuceLibraryCode/include_juce_audio_formats.cpp
+    #JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp
+    JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp
+    JuceLibraryCode/include_juce_audio_processors.cpp
+    JuceLibraryCode/include_juce_audio_utils.cpp
+    JuceLibraryCode/include_juce_core.cpp
+    JuceLibraryCode/include_juce_data_structures.cpp
+    JuceLibraryCode/include_juce_dsp.cpp
+    JuceLibraryCode/include_juce_events.cpp
+    JuceLibraryCode/include_juce_graphics.cpp
+    JuceLibraryCode/include_juce_gui_basics.cpp
+    JuceLibraryCode/include_juce_gui_extra.cpp
 )
 
 # Create executable/library target

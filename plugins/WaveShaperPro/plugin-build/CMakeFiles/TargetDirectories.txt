@@ -1,0 +1,3 @@
+/home/asabaal/asabaal_ventures/repos/juce-plugins/plugins/WaveShaperPro/plugin-build/CMakeFiles/WaveShaperPro.dir
+/home/asabaal/asabaal_ventures/repos/juce-plugins/plugins/WaveShaperPro/plugin-build/CMakeFiles/edit_cache.dir
+/home/asabaal/asabaal_ventures/repos/juce-plugins/plugins/WaveShaperPro/plugin-build/CMakeFiles/rebuild_cache.dir
