@@ -107,3 +107,27 @@ endif()
 
 # Set output name
 set_target_properties(WaveShaperPro PROPERTIES OUTPUT_NAME "AA WaveShaper")
+# Also create VST3 version for DAW use
+add_library(WaveShaperPro_VST3 SHARED ${SOURCES})
+
+# VST3-specific settings
+target_compile_definitions(WaveShaperPro_VST3 PRIVATE
+    ${JUCE_COMPILE_DEFINITIONS}
+    JucePlugin_Build_VST3=1
+    JucePlugin_Build_Standalone=0
+)
+
+# Same linking as standalone
+target_link_libraries(WaveShaperPro_VST3 PRIVATE 
+    asound pthread dl freetype png z jpeg
+    X11 Xext Xinerama Xrandr Xcursor Xrender Xcomposite
+    fontconfig
+    gtk-3 gdk-3 gobject-2.0 glib-2.0 
+    cairo pango-1.0 pangocairo-1.0 gdk_pixbuf-2.0 atk-1.0
+    FLAC vorbis vorbisenc vorbisfile ogg)
+
+# Set VST3 properties
+set_target_properties(WaveShaperPro_VST3 PROPERTIES
+    OUTPUT_NAME "AA WaveShaper"
+    SUFFIX ".vst3"
+)
